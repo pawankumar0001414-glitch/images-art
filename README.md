@@ -2,7 +2,11 @@
 
 A generative art toy. Every piece is drawn fresh in the browser — no images, no libraries, no build step.
 
+**Live:** https://filament-art-toy.onrender.com
+**Repository:** https://github.com/pawankumar0001414-glitch/images-art
+
 Open `web/index.html` directly, or serve the folder:
+
 
 ```sh
 npx serve web

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filament — a generative art toy</title>
+  <meta name="description" content="Filament draws a one-of-a-kind artwork every time you visit. Draw a new piece, save the print, share the seed.">
+  <meta name="theme-color" content="#08080a">
+  <meta property="og:title" content="Filament — a generative art toy">
+  <meta property="og:description" content="Every piece is drawn from a seed. New piece, save the print, share the link.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0d'/%3E%3Cpath d='M13 43c10-24 28-24 38 0' stroke='%23f0ede6' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='31' r='3.5' fill='%23f0ede6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Filament, draw a new piece">
+      <span class="mark" aria-hidden="true"></span>
+      Filament
+    </a>
+    <p class="tagline">A generative art toy</p>
+  </header>
+
+  <main>
+    <section class="plate" aria-label="Current artwork">
+      <div class="stage" id="stage">
+        <canvas id="art" role="img" aria-label="Generative artwork"></canvas>
+      </div>
+      <div class="meta">
+        <p class="meta-left">
+          <span id="modeName">Silk</span>
+          <span class="sep" aria-hidden="true">·</span>
+          <span id="paletteName">—</span>
+        </p>
+        <p class="meta-study">Study № <span id="studyNo">—</span></p>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button class="btn btn-primary" id="newBtn" type="button">New piece <kbd>space</kbd></button>
+      <button class="btn" id="saveBtn" type="button">Save PNG</button>
+      <button class="btn" id="copyBtn" type="button">Copy link</button>
+    </div>
+    <p class="hint">Space for a new piece · S to save · C to copy the link</p>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <p class="sr-only" id="live" aria-live="polite"></p>
+
+  <noscript>
+    <p class="noscript">Filament draws with JavaScript. Enable it to see a piece.</p>
+  </noscript>
+
+  <script src="art.js"></script>
+</body>
+</html>

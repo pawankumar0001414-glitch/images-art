@@ -1,0 +1,5 @@
+services:
+  - type: web
+    name: filament
+    runtime: static
+    staticPublishPath: ./web
